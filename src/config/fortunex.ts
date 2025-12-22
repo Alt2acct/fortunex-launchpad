@@ -9,7 +9,7 @@ export const CONFIG = {
   DEMO_VIDEO_URL: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   
   // Payment gateway base URL
-  PAYMENT_GATEWAY_URL: "/payment.html",
+  PAYMENT_GATEWAY_URL: "/payment",
   
   // Platform stats
   MEMBER_COUNT: "50,000+",
