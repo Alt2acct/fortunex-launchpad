@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { VideoButton } from "@/components/VideoModal";
 import { CONFIG } from "@/config/fortunex";
-import { ArrowRight, Users, Sparkles, TrendingUp, Shield } from "lucide-react";
+import { ArrowRight, Users, TrendingUp, Shield } from "lucide-react";
 import heroMockup from "@/assets/hero-mockup.png";
+import logoGold from "@/assets/logo-gold.png"; // ← Your custom golden FortuneX logo
 
 const Index = () => {
   return (
@@ -12,8 +13,8 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg gradient-gold flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-foreground" />
+            <div className="w-8 h-8 rounded-lg gradient-gold flex items-center justify-center overflow-hidden">
+              <img src={logoGold} alt="FortuneX Logo" className="w-6 h-6 object-contain" />
             </div>
             <span className="text-xl md:text-2xl font-display font-bold text-foreground">
               Fortune<span className="text-gold">X</span>
@@ -132,9 +133,9 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                icon: Sparkles,
                 title: "Simple Tasks",
                 description: "Complete easy daily tasks and watch your earnings grow automatically",
+                isCustomIcon: true, // Flag for our custom logo
               },
               {
                 icon: TrendingUp,
@@ -151,8 +152,12 @@ const Index = () => {
                 key={index}
                 className="group p-6 md:p-8 bg-card rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border"
               >
-                <div className="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-6 h-6 text-foreground" />
+                <div className="w-12 h-12 rounded-xl gradient-gold flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden">
+                  {feature.isCustomIcon ? (
+                    <img src={logoGold} alt="FortuneX Logo" className="w-10 h-10 object-contain" />
+                  ) : (
+                    <feature.icon className="w-6 h-6 text-foreground" />
+                  )}
                 </div>
                 <h3 className="text-xl font-display font-bold text-foreground mb-2">
                   {feature.title}
