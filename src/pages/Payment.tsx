@@ -7,9 +7,9 @@ import { useToast } from "@/hooks/use-toast";
 
 // Payment account details - edit these values
 const PAYMENT_ACCOUNT = {
-  accountNumber: "4002320439",
-  bankName: "Moniepoint MFB",
-  accountName: "CYNETFIX TECH - 2",
+  accountNumber: "3002992678",
+  bankName: "KUDA BANK",
+  accountName: "Skillnify Networks_FORTUNE X",
 };
 
 const Payment = () => {
@@ -69,7 +69,7 @@ const Payment = () => {
 
   const handlePaymentMade = () => {
     const reference = `FX${Date.now()}`;
-    const whatsappMessage = `Hello Admin, I want to register for ${planName} (₦${amount.toLocaleString()}). My payment reference is ${reference}. Please verify my payment.`;
+    const whatsappMessage = `Hello Admin, I want to register for ${planName} (₦${amount.toLocaleString()}). My payment reference is ${reference} (Send your payment screenshot). Please verify my payment.`;
     const whatsappUrl = generateWhatsAppUrl(whatsappMessage);
     window.open(whatsappUrl, "_blank");
   };
