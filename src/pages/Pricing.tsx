@@ -60,6 +60,7 @@ const Pricing = () => {
               price={PLANS.starter.price}
               currency={PLANS.starter.currency}
               features={PLANS.starter.features}
+              image={PLANS.starter.image}
               popular={PLANS.starter.popular}
               index={0}
             />
@@ -69,6 +70,7 @@ const Pricing = () => {
               price={PLANS.plus.price}
               currency={PLANS.plus.currency}
               features={PLANS.plus.features}
+              image={PLANS.plus.image}
               popular={PLANS.plus.popular}
               index={1}
             />

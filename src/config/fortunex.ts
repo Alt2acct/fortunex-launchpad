@@ -1,6 +1,9 @@
 // Configuration for FortuneX
 // Edit these values to customize the platform
 
+import planStarterImage from "@/assets/plan-starter.jpg";
+import planPlusImage from "@/assets/plan-plus.jpg";
+
 export const CONFIG = {
   // Admin WhatsApp number (include country code without +)
   ADMIN_WHATSAPP: "2348012345678",
@@ -20,6 +23,7 @@ export const PLANS = {
     name: "FortuneX Starter",
     price: 7500,
     currency: "₦",
+    image: planStarterImage,
     features: [
       { label: "Fortune Connect", value: "₦6,000" },
       { label: "ROI (Return of ADS)", value: "10%" },
@@ -35,6 +39,7 @@ export const PLANS = {
     name: "FortuneX Plus",
     price: 14500,
     currency: "₦",
+    image: planPlusImage,
     features: [
       { label: "Fortune Connect", value: "₦12,500" },
       { label: "ROI (Return of ADS)", value: "10%" },
