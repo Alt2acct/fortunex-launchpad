@@ -47,7 +47,7 @@ const Payment = () => {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `\( {mins.toString().padStart(2, "0")}: \){secs.toString().padStart(2, "0")}`;
+    return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
   const copyAccountNumber = async () => {
@@ -70,7 +70,7 @@ const Payment = () => {
 
   const handlePaymentMade = () => {
     const reference = `FX${Date.now()}`;
-    const whatsappMessage = `Hello Admin, I want to register for \( {planName} (₦ \){amount.toLocaleString()}). My payment reference is ${reference} (Send your payment screenshot). Please verify my payment.`;
+    const whatsappMessage = `Hello Admin, I want to register for ${planName} (₦${amount.toLocaleString()}). My payment reference is ${reference} (Send your payment screenshot). Please verify my payment.`;
     const whatsappUrl = generateWhatsAppUrl(whatsappMessage);
     window.open(whatsappUrl, "_blank");
   };
