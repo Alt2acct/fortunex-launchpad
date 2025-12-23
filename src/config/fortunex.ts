@@ -9,7 +9,7 @@ export const CONFIG = {
   ADMIN_WHATSAPP: "2349134719121",
   
   // Demo video URL (YouTube embed or custom video)
-  DEMO_VIDEO_URL: "#",
+  DEMO_VIDEO_URL: " ",
   
   // Payment gateway base URL
   PAYMENT_GATEWAY_URL: "/payment",
