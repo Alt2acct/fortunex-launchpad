@@ -31,9 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
-        env:
-          VITE_BASE: /fortunex/  # Sets correct base path for https://alt2acct.github.io/fortunex/
+        run: npm run build -- --base /fortunex/  # This fixes the asset paths for your repo subpath
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
